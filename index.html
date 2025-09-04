@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>💌Undangan Pernikahan Zeblanov & Mutiara</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="falling-flowers"></div>
+
+    <!-- Section HOME -->
+    <section id="home" class="section full-screen">
+      <video autoplay muted loop playsinline class="bg-video">
+        <source src="img/4.mp4" type="video/mp4" />
+        Browser tidak mendukung video.
+      </video>
+      <div class="bg-overlay"></div>
+
+      <div class="container">
+        <p class="sapaan">Kepada Bapak/Ibu/Saudara/i,</p>
+        <h1 class="nama">Zeblanov & Mutiara</h1>
+        <p class="resepsi">Akan melangsungkan resepsi pernikahan dalam:</p>
+        <div class="countdown-container">
+          <div class="countdown-box">
+            <span id="days">0</span><small>Hari</small>
+          </div>
+          <div class="countdown-box">
+            <span id="hours">0</span><small>Jam</small>
+          </div>
+          <div class="countdown-box">
+            <span id="minutes">0</span><small>Menit</small>
+          </div>
+          <div class="countdown-box">
+            <span id="seconds">0</span><small>Detik</small>
+          </div>
+        </div>
+        <a href="#info" class="btn-undangan">Lihat Undangan</a>
+      </div>
+      <button id="toggle-music" class="btn-musik">♫</button>
+      <audio id="bg-music" autoplay loop>
+        <source src="musik/Dansa.mp3" type="audio/mpeg" />
+      </audio>
+      <div class="flower-container" id="falling-flowers"></div>
+    </section>
+
+    <!-- Sticky Navbar -->
+    <nav id="navbar">
+      <div class="logo">Zhe & Mutia</div>
+      <ul class="nav-links">
+        <li><a href="#home">HOME</a></li>
+        <li><a href="#info">INFO</a></li>
+        <li><a href="#story">STORY</a></li>
+        <li><a href="#gallery">GALLERY</a></li>
+        <li><a href="#rsvp">RSVP</a></li>
+      </ul>
+      <div class="hamburger">&#9776;</div>
+    </nav>
+
+    <!-- Section INFO -->
+    <section id="info" class="section full-screen">
+      <div class="info-content">
+        <h2 class="judul-info">Acara Pernikahan</h2>
+        <p class="tanggal-info">
+          Diselenggarakan pada 22 November 2025 di Kab.Semarang, Jawa Tengah.
+        </p>
+        <p class="deskripsi-info">
+          Oleh karena itu, dengan segala hormat, kami bermaksud untuk mengundang
+          Bapak/Ibu, Saudara/i, untuk hadir pada acara pernikahan kami.
+        </p>
+        <div class="pengantin-container">
+          <div class="pengantin-flex">
+            <!-- Pengantin Pria -->
+            <div class="pengantin-card">
+              <h3 class="nama-pengantin">Tatacherda Zeblanov Sembara</h3>
+              <img src="img/ze.jpg" class="foto-pengantin" />
+              <p>Putra dari Bpk. Suhartono<br />dan<br />Ibu Sri Mulyani</p>
+            </div>
+
+            <div class="love-icon">❤️</div>
+
+            <!-- Pengantin Wanita -->
+            <div class="pengantin-card">
+              <h3 class="nama-pengantin">Mutiara Peggia Setiawan Putri</h3>
+              <img src="img/muti.jpg" class="foto-pengantin" />
+              <p>
+                Putri dari Bpk. Agus Setyawan<br />dan<br />Ibu Maulina
+                Widiastuti
+              </p>
+            </div>
+          </div>
+        </div>
+        <a
+          class="btn-map"
+          href="https://www.google.com/maps/dir//Waroeng+Tjandi"
+          target="_blank"
+          >🗺️ Lihat Lokasi</a
+        >
+        <a class="btn-map" href="javascript:void(0)" onclick="openModal()"
+          >Detail Acara</a
+        >
+      </div>
+    </section>
+    <!-- Popup Modal -->
+    <div id="eventModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2>Detail Acara</h2>
+        <p>
+          <strong>Akad Nikah:</strong> Sabtu, 22 November 2025 pukul 14.00 WIB
+        </p>
+        <p><strong>Resepsi:</strong> Setelah akad, di lokasi sesuai Maps</p>
+      </div>
+    </div>
+
+    <!-- STORY Section -->
+    <section id="story" class="section full-screen">
+      <div class="container">
+        <h2 class="judul-info">Kisah Cinta Kami</h2>
+        <div class="story-timeline">
+          <div class="story-item">
+            <h4>Pertemuan Pertama</h4>
+            <p>
+              Kami pertama kali bertemu di sekolah saat masih duduk di bangku
+              SMP pada tahun 2018, dan sejak saat itu menjadi teman dekat.
+            </p>
+          </div>
+          <div class="story-item">
+            <h4>Jadian</h4>
+            <p>
+              Setelah cukup lama berteman, akhirnya kami resmi berpacaran pada
+              24 November 2018.
+            </p>
+          </div>
+          <div class="story-item">
+            <h4>Lamaran</h4>
+            <p>nanti di isi.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY Section -->
+    <section id="gallery" class="section">
+      <div class="container">
+        <h2 class="judul-info">Galeri Foto</h2>
+        <div class="gallery-grid">
+          <img
+            src="img/a.JPG"
+            alt="Foto 1"
+            class="gallery-img"
+            onclick="openLightbox(this)"
+          />
+          <img
+            src="img/b.jpg"
+            alt="Foto 2"
+            class="gallery-img"
+            onclick="openLightbox(this)"
+          />
+          <img
+            src="img/c.jpg"
+            alt="Foto 2"
+            class="gallery-img"
+            onclick="openLightbox(this)"
+          />
+          <img
+            src="img/e.jpg"
+            alt="Foto 2"
+            class="gallery-img"
+            onclick="openLightbox(this)"
+          />
+          <img
+            src="img/d.jpg"
+            alt="Foto 3"
+            class="gallery-img"
+            onclick="openLightbox(this)"
+          />
+          <img
+            src="img/1.JPG"
+            alt="Foto 4"
+            class="gallery-img"
+            onclick="openLightbox(this)"
+          />
+          <img
+            src="img/2.JPG"
+            alt="Foto 5"
+            class="gallery-img"
+            onclick="openLightbox(this)"
+          />
+          <img
+            src="img/3.JPG"
+            alt="Foto 6"
+            class="gallery-img"
+            onclick="openLightbox(this)"
+          />
+          <img
+            src="img/4.JPG"
+            alt="Foto 7"
+            class="gallery-img"
+            onclick="openLightbox(this)"
+          />
+          <img
+            src="img/5.JPG"
+            alt="Foto 8"
+            class="gallery-img"
+            onclick="openLightbox(this)"
+          />
+          <img
+            src="img/6.JPG"
+            alt="Foto 9"
+            class="gallery-img"
+            onclick="openLightbox(this)"
+          />
+          <img
+            src="img/7.JPG"
+            alt="Foto 10"
+            class="gallery-img"
+            onclick="openLightbox(this)"
+          />
+          <img
+            src="img/8.JPG"
+            alt="Foto 11"
+            class="gallery-img"
+            onclick="openLightbox(this)"
+          />
+          <img
+            src="img/9.JPG"
+            alt="Foto 12"
+            class="gallery-img"
+            onclick="openLightbox(this)"
+          />
+          <img
+            src="img/10.JPG"
+            alt="Foto 13"
+            class="gallery-img"
+            onclick="openLightbox(this)"
+          />
+          <img
+            src="img/11.JPG"
+            alt="Foto 14"
+            class="gallery-img"
+            onclick="openLightbox(this)"
+          />
+          <img
+            src="img/12.JPG"
+            alt="Foto 15"
+            class="gallery-img"
+            onclick="openLightbox(this)"
+          />
+          <img
+            src="img/13.JPG"
+            alt="Foto 16"
+            class="gallery-img"
+            onclick="openLightbox(this)"
+          />
+          <img
+            src="img/14.JPG"
+            alt="Foto 17"
+            class="gallery-img"
+            onclick="openLightbox(this)"
+          />
+          <img
+            src="img/15.JPG"
+            alt="Foto 18"
+            class="gallery-img"
+            onclick="openLightbox(this)"
+          />
+          <img
+            src="img/16.JPG"
+            alt="Foto 19"
+            class="gallery-img"
+            onclick="openLightbox(this)"
+          />
+          <img
+            src="img/18.JPG"
+            alt="Foto 20"
+            class="gallery-img"
+            onclick="openLightbox(this)"
+          />
+          <img
+            src="img/17.JPG"
+            alt="Foto 21"
+            class="gallery-img"
+            onclick="openLightbox(this)"
+          />
+          <img
+            src="img/19.JPG"
+            alt="Foto 22"
+            class="gallery-img"
+            onclick="openLightbox(this)"
+          />
+          <img
+            src="img/20.JPG"
+            alt="Foto 23"
+            class="gallery-img"
+            onclick="openLightbox(this)"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Lightbox -->
+
+    <!DOCTYPE html>
+    <html lang="id">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>RSVP Acara</title>
+        <style>
+          :root {
+            --gold: #c49a6c;
+            --gold-dark: #a67c52;
+            --bg: #fff7fb;
+            --card: #ffffff;
+            --text: #2e2a27;
+            --muted: #7a736e;
+            --ok: #27ae60;
+          }
+          * {
+            box-sizing: border-box;
+          }
+          body {
+            margin: 0;
+            font-family: "Segoe UI", system-ui, Arial, sans-serif;
+            background: linear-gradient(180deg, #ffeef7 0%, var(--bg) 100%);
+            color: var(--text);
+          }
+
+          /* Section RSVP */
+          .section-rsvp {
+            padding: 48px 16px 60px;
+            position: relative;
+            background: radial-gradient(
+                1200px 200px at 50% 0,
+                #ffe0ea 0%,
+                rgba(255, 224, 234, 0) 70%
+              ),
+              linear-gradient(180deg, #fff0f6 0%, transparent 40%);
+          }
+          .section-rsvp .section-wrap {
+            max-width: 920px;
+            margin: 0 auto;
+          }
+          .section-head {
+            text-align: center;
+            margin-bottom: 22px;
+          }
+          .section-eyebrow {
+            display: inline-block;
+            padding: 6px 12px;
+            border-radius: 999px;
+            background: #fff;
+            border: 1px solid #f2e6da;
+            color: var(--gold-dark);
+            font-weight: 600;
+            font-size: 12px;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+          }
+          .section-title {
+            margin: 10px 0 6px;
+            font-size: 28px;
+            color: var(--gold-dark);
+          }
+          .section-sub {
+            margin: 0;
+            color: var(--muted);
+          }
+
+          .info {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+            background: #fff;
+            border: 1px solid #f2e6da;
+            border-radius: 14px;
+            padding: 12px 16px;
+            margin: 18px auto 26px;
+            max-width: 760px;
+          }
+          .info p {
+            margin: 0;
+            font-size: 14px;
+            color: #4a4541;
+          }
+
+          .wrap {
+            max-width: 920px;
+            margin: 0 auto;
+          }
+          .card {
+            background: var(--card);
+            border-radius: 20px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+          }
+          .card-header {
+            padding: 22px;
+            background: linear-gradient(90deg, #ffe0ea, #fff2e4);
+            border-bottom: 1px solid #f2e6da;
+            text-align: center;
+          }
+          .title {
+            margin: 0;
+            font-size: 22px;
+            letter-spacing: 0.5px;
+            color: var(--gold-dark);
+          }
+
+          .card-body {
+            padding: 22px;
+          }
+          .form-group {
+            margin: 14px 0 18px;
+          }
+          label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--text);
+          }
+          .hint {
+            display: block;
+            font-size: 12px;
+            color: var(--muted);
+            margin-top: 6px;
+          }
+
+          input,
+          select {
+            width: 100%;
+            padding: 12px 14px;
+            font-size: 15px;
+            border: 1px solid #e7ded6;
+            border-radius: 12px;
+            background: #fff;
+            color: var(--text);
+            transition: border 0.2s, box-shadow 0.2s;
+            appearance: none;
+          }
+          input:focus,
+          select:focus {
+            outline: none;
+            border-color: var(--gold);
+            box-shadow: 0 0 0 4px rgba(196, 154, 108, 0.15);
+          }
+
+          .row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+          }
+          @media (max-width: 640px) {
+            .row {
+              grid-template-columns: 1fr;
+            }
+          }
+
+          .btn {
+            width: 100%;
+            border: 0;
+            border-radius: 999px;
+            background: var(--gold);
+            color: #fff;
+            font-weight: 700;
+            padding: 14px 18px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.05s;
+          }
+          .btn:hover {
+            background: var(--gold-dark);
+          }
+          .btn:active {
+            transform: translateY(1px);
+          }
+          .btn[disabled] {
+            opacity: 0.7;
+            cursor: not-allowed;
+          }
+          .btn .spinner {
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            border: 2px solid rgba(255, 255, 255, 0.45);
+            border-top-color: #fff;
+            margin-right: 10px;
+            display: none;
+            animation: spin 0.8s linear infinite;
+            vertical-align: -3px;
+          }
+          .btn.loading .spinner {
+            display: inline-block;
+          }
+          @keyframes spin {
+            to {
+              transform: rotate(360deg);
+            }
+          }
+
+          .msg {
+            margin-top: 12px;
+            font-size: 14px;
+            color: var(--ok);
+            min-height: 20px;
+            font-style: italic;
+          }
+        </style>
+      </head>
+      <body>
+        <!-- ===== SECTION RSVP ===== -->
+        <section id="rsvp" class="section-rsvp">
+          <div class="section-wrap">
+            <div class="section-head">
+              <span class="section-eyebrow">Konfirmasi Kehadiran</span>
+              <h2 class="section-title">RSVP Pernikahan</h2>
+              <p class="section-sub">
+                Mohon isi formulir berikut untuk membantu kami menyiapkan tempat
+                & konsumsi.
+              </p>
+            </div>
+
+            <div class="info">
+              <p><strong>Alamat:</strong> Waroeng Tjandi – Singampon</p>
+              <p>
+                Jl. Kyai Sono, Blanten, Genuk, Kec. Ungaran Bar., Kab. Semarang,
+                Jawa Tengah 50512
+              </p>
+              <p><strong>CP:</strong> 089524143890 (Aurel)</p>
+            </div>
+
+            <div class="wrap">
+              <div class="card">
+                <div class="card-header"><h1 class="title">Form RSVP</h1></div>
+
+                <div class="card-body">
+                  <form
+                    id="rsvpForm"
+                    action="https://docs.google.com/forms/d/e/1FAIpQLSf5-Rb7tR9_bA8LxkJ3K3CKJrgfsRWqwQPc6-hgJmiDcSqXkw/formResponse"
+                    method="POST"
+                    target="hidden_iframe"
+                  >
+                    <!-- Nama -->
+                    <div class="form-group">
+                      <label for="name">Nama Lengkap</label>
+                      <input
+                        type="text"
+                        id="name"
+                        name="entry.1498135098"
+                        placeholder="Nama lengkap"
+                        autocomplete="name"
+                        required
+                      />
+                    </div>
+
+                    <div class="row">
+                      <!-- Kehadiran -->
+                      <div class="form-group">
+                        <label for="attendance">Apakah Anda akan hadir?</label>
+                        <select id="attendance" name="entry.877086558" required>
+                          <option value="">-- Pilih --</option>
+                          <option value="Ya, saya akan hadir">
+                            Ya, saya akan hadir
+                          </option>
+                          <option value="Maaf, saya tidak bisa hadir">
+                            Maaf, saya tidak bisa hadir
+                          </option>
+                        </select>
+                      </div>
+
+                      <!-- Jumlah tamu -->
+                      <div class="form-group">
+                        <label for="guests">Jumlah Tamu yang hadir</label>
+                        <input
+                          type="number"
+                          id="guests"
+                          name="entry.2606285"
+                          inputmode="numeric"
+                          min="0"
+                          max="2"
+                          placeholder="0, 1, atau 2"
+                          required
+                        />
+                        <small class="hint"
+                          >Maksimal 2 orang (tamu + pendamping). 0 bila tidak
+                          hadir.</small
+                        >
+                      </div>
+                    </div>
+
+                    <!-- Sumber info -->
+                    <div class="form-group">
+                      <label for="source"
+                        >Bagaimana Anda mengetahui tentang acara ini?</label
+                      >
+                      <select id="source" name="entry.1424661284" required>
+                        <option value="">-- Pilih --</option>
+                        <option value="Situs web">Situs web</option>
+                        <option value="Teman">Teman</option>
+                        <option value="Whatsapp">Whatsapp</option>
+                        <!-- ubah ke "WhatsApp" jika di Form ejaannya begitu -->
+                        <option value="Undangan Kertas">Undangan Kertas</option>
+                      </select>
+                    </div>
+
+                    <button type="submit" class="btn" id="submitBtn">
+                      <span class="spinner" aria-hidden="true"></span>
+                      Kirim
+                    </button>
+                    <div
+                      id="msg"
+                      class="msg"
+                      role="status"
+                      aria-live="polite"
+                    ></div>
+                  </form>
+
+                  <!-- supaya tidak pindah halaman -->
+                  <iframe name="hidden_iframe" style="display: none"></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- JS dibungkus agar tidak bentrok -->
+        <script>
+          (() => {
+            const rsvpForm = document.getElementById("rsvpForm");
+            const rsvpMsg = document.getElementById("msg");
+            const rsvpAttendance = document.getElementById("attendance");
+            const rsvpGuests = document.getElementById("guests");
+            const rsvpSubmitBtn = document.getElementById("submitBtn");
+
+            function applyGuestsRule() {
+              if (rsvpAttendance.value === "Maaf, saya tidak bisa hadir") {
+                rsvpGuests.min = 0;
+                rsvpGuests.value = 0;
+                rsvpGuests.setAttribute("readonly", "readonly");
+                rsvpGuests.placeholder = "0";
+              } else {
+                rsvpGuests.min = 1;
+                rsvpGuests.removeAttribute("readonly");
+                if (!rsvpGuests.value || Number(rsvpGuests.value) < 1)
+                  rsvpGuests.value = 1;
+                rsvpGuests.placeholder = "1 atau 2";
+              }
+            }
+
+            rsvpAttendance.addEventListener("change", applyGuestsRule);
+            applyGuestsRule();
+
+            rsvpForm.addEventListener("submit", () => {
+              rsvpSubmitBtn.classList.add("loading");
+              rsvpSubmitBtn.setAttribute("disabled", "disabled");
+              rsvpSubmitBtn.querySelector(".spinner").style.display =
+                "inline-block";
+              rsvpMsg.textContent = "Mengirim...";
+
+              setTimeout(() => {
+                rsvpMsg.textContent = "Terima kasih, RSVP berhasil terkirim!";
+                rsvpSubmitBtn.classList.remove("loading");
+                rsvpSubmitBtn.removeAttribute("disabled");
+                rsvpSubmitBtn.querySelector(".spinner").style.display = "none";
+                rsvpForm.reset();
+                rsvpGuests.min = 1;
+                rsvpGuests.removeAttribute("readonly");
+                rsvpGuests.placeholder = "1 atau 2";
+              }, 900);
+            });
+          })();
+        </script>
+      </body>
+    </html>
+
+    <script>
+      const bgMusic = document.getElementById("bg-music");
+      const toggleBtn = document.getElementById("toggle-music");
+      toggleBtn.addEventListener("click", () => {
+        if (bgMusic.paused) {
+          bgMusic.play();
+          toggleBtn.textContent = "♫";
+        } else {
+          bgMusic.pause();
+          toggleBtn.textContent = "🔇";
+        }
+      });
+      document.addEventListener(
+        "click",
+        () => {
+          if (bgMusic.paused) bgMusic.play().catch(() => {});
+        },
+        { once: true }
+      );
+
+      // Countdown
+      const countdownDate = new Date("2025-11-22T16:00:00").getTime();
+      setInterval(() => {
+        const now = new Date().getTime();
+        const distance = countdownDate - now;
+        document.getElementById("days").innerText = Math.floor(
+          distance / (1000 * 60 * 60 * 24)
+        );
+        document.getElementById("hours").innerText = Math.floor(
+          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        document.getElementById("minutes").innerText = Math.floor(
+          (distance % (1000 * 60 * 60)) / (1000 * 60)
+        );
+        document.getElementById("seconds").innerText = Math.floor(
+          (distance % (1000 * 60)) / 1000
+        );
+      }, 1000);
+
+      // Sticky navbar
+      window.addEventListener("scroll", () => {
+        const nav = document.getElementById("navbar");
+        const infoSection = document.getElementById("info");
+        if (window.scrollY >= infoSection.offsetTop - 80) {
+          nav.classList.add("show");
+        } else {
+          nav.classList.remove("show");
+        }
+      });
+
+      // Hamburger menu
+      document.querySelector(".hamburger").addEventListener("click", () => {
+        document.querySelector(".nav-links").classList.toggle("active");
+      });
+
+      // Falling flower effect
+      setInterval(() => {
+        const flower = document.createElement("div");
+        flower.className = "flower";
+        flower.innerHTML = "🌸";
+        flower.style.left = Math.random() * 100 + "vw";
+        flower.style.animationDuration = 3 + Math.random() * 4 + "s";
+        document.getElementById("falling-flowers").appendChild(flower);
+        setTimeout(() => flower.remove(), 7000);
+      }, 500);
+    </script>
+    <script>
+      function createFlower() {
+        const flowers = ["🌸", "🌺", "🌷", "🌹", "❤️"];
+        const flower = document.createElement("div");
+        flower.classList.add("flower");
+        flower.textContent =
+          flowers[Math.floor(Math.random() * flowers.length)];
+        flower.style.left = Math.random() * 100 + "vw";
+        flower.style.animationDuration = Math.random() * 5 + 5 + "s";
+        document.querySelector(".falling-flowers").appendChild(flower);
+
+        setTimeout(() => flower.remove(), 10000);
+      }
+
+      setInterval(createFlower, 500);
+    </script>
+
+    <script>
+      function openLightbox(img) {
+        document.getElementById("lightbox").style.display = "flex";
+        document.getElementById("lightbox-img").src = img.src;
+      }
+      function closeLightbox() {
+        document.getElementById("lightbox").style.display = "none";
+      }
+    </script>
+
+    <script>
+      function openModal() {
+        document.getElementById("eventModal").style.display = "flex";
+      }
+      function closeModal() {
+        document.getElementById("eventModal").style.display = "none";
+      }
+      // Tutup kalau klik luar modal
+      window.onclick = function (event) {
+        let modal = document.getElementById("eventModal");
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      };
+    </script>
+
+    <script>
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycbzD9TO5V9g5BK-uZ0oJMHEhjXCLsI8l1JTq9q36q9j3YY7VcchBJfu6iCvrtY0I7eCm/exec";
+      const form = document.forms["submit-to-google-sheet"];
+      const msg = document.getElementById("msg");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => {
+            msg.innerHTML = "Terima kasih, data Anda sudah terkirim!";
+            setTimeout(() => {
+              msg.innerHTML = "";
+            }, 5000);
+            form.reset();
+          })
+          .catch((error) => {
+            msg.innerHTML = "Terjadi kesalahan, coba lagi.";
+            console.error("Error!", error.message);
+          });
+      });
+    </script>
+  </body>
+</html>

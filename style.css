@@ -1,0 +1,511 @@
+:root {
+  --pink: #d63384;
+  --font-main: 'Poppins', sans-serif;
+  --font-script: 'Great Vibes', cursive;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 10000;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 10px;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+/* Isi Modal */
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-content h2 {
+  margin-bottom: 15px;
+  color: #d63384;
+}
+
+.modal-content p {
+  margin: 10px 0;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #333;
+}
+
+.close:hover {
+  color: #d63384;
+}
+
+@keyframes fadeIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+
+body {
+  font-family: var(--font-main);
+  background: #fff;
+  color: #333;
+}
+
+.falling-flowers {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 9999;
+}
+
+.flower {
+  position: absolute;
+  top: -50px;
+  font-size: 24px;
+  animation: fall linear forwards;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh) rotate(360deg);
+    opacity: 0.7;
+  }
+}
+
+
+.full-screen {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  text-align: center;
+  position: relative;
+}
+
+.container {
+  max-width: 700px;
+}
+
+.nama {
+  font-family: var(--font-script);
+  font-size: 4rem;
+  color: var(--pink);
+  margin: 1rem 0;
+}
+
+.countdown-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.countdown-box {
+  background: #fce4ec;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.btn-undangan,
+.btn-map {
+  display: inline-block;
+  background: var(--pink);
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border-radius: 30px;
+  text-decoration: none;
+  margin-top: 1rem;
+}
+
+ 
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /* biar video di belakang konten */
+  filter: grayscale(60%) blur(2px) brightness(0.9); /* bikin hitam putih */
+}
+
+.bg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 192, 203, 0.25); /* pink lembut */
+  z-index: -1;
+}
+
+h2, h3, p {
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+}
+
+
+#home {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+#home p {
+  color: #fff; /* putih hanya untuk p di dalam section home */
+}
+
+/* RSVP Section */
+.rsvp-section {
+  background: #fff0f5; /* pink muda */
+  padding: 60px 20px;
+  height: 100vh;
+  text-align: center;
+}
+
+
+.rsvp-container {
+  max-width: 500px;
+  margin: auto;
+  background: #ffffffd9;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.rsvp-section h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #e75480;
+}
+
+.rsvp-section p {
+  margin-bottom: 25px;
+  color: #444;
+}
+
+.form-group {
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.rsvp-btn {
+  background: #e75480;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 1rem;
+}
+
+.rsvp-btn:hover {
+  background: #c13d66;
+}
+
+#msg {
+  display: block;
+  margin-top: 15px;
+  font-size: 0.9rem;
+  color: green;
+}
+
+
+.btn-musik {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: rgba(255, 255, 255, 0.85);
+  border: none;
+  font-size: 1.2rem;
+  padding: 0.7rem 0.9rem;
+  border-radius: 50%;
+  z-index: 10;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s, transform 0.3s;
+}
+
+.btn-musik:hover {
+  background: rgba(255, 255, 255, 1);
+  transform: scale(1.1);
+}
+
+#navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  z-index: 998;
+  transform: translateY(-100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+#navbar.show {
+  transform: translateY(0);
+}
+
+#navbar .logo {
+  font-family: var(--font-script);
+  font-size: 2rem;
+  color: var(--pink);
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+}
+
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* Background nuansa pink mulai dari info */
+#info, #story, #gallery, #rsvp, #gifts {
+  background: linear-gradient(180deg, #fff0f6, #ffe6f0);
+}
+
+/* Container pengantin */
+.pengantin-flex {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.pengantin-card {
+  text-align: center;
+}
+
+.nama-pengantin {
+  color: var(--pink);
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.foto-pengantin {
+  border-radius: 50%;
+  margin-bottom: 0.5rem;
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+}
+
+.love-icon {
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+.judul-info {
+  font-family: var(--font-script);
+  font-size: 3rem;
+  color: var(--pink);
+}
+
+.tanggal-info {
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+/* Story Timeline */
+.story-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 2rem;
+  text-align: left;
+}
+
+.story-item h4 {
+  color: var(--pink);
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+#gallery .judul-info {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #d63384;
+  margin-top: 60px;   /* jarak dari atas */
+  margin-bottom: 40px; /* jarak ke grid foto */
+  text-align: center;
+}
+
+
+/* Grid Gallery */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* fix 5 kolom */
+  gap: 20px;
+  justify-items: center; /* semua foto center di kolom */
+  max-width: 1200px; /* biar grid tidak kepanjangan */
+  margin: 40px auto 0; /* supaya grid center */
+}
+
+.gallery-img {
+  width: 200px;   /* fix ukuran */
+  height: 300px;  /* fix tinggi (boleh diubah sesuai proporsi) */
+  object-fit: cover; /* supaya gambar tetap rapi */
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+
+.gallery-img:hover {
+  transform: scale(1.05);
+}
+
+
+#gallery {
+  min-height: auto; /* tidak fix fullscreen */
+  padding: 4rem 2rem;
+} 
+
+#gallery .container {
+  max-width: 1200px;
+  margin: 0 auto;   /* center */
+  text-align: center;
+}
+
+/* Efek bunga jatuh */
+.flower {
+  position: absolute;
+  top: -50px;
+  font-size: 1.5rem;
+  color: pink;
+  animation: fall linear forwards;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* Responsif */
+@media (max-width: 992px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 65%;
+  }
+  .hamburger {
+    display: block;
+  }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #fff;
+    position: absolute;
+    right: 1rem;
+    top: 4rem;
+    padding: 1rem;
+    border-radius: 10px;
+  }
+  .nav-links.active {
+    display: flex;
+  }
+  .pengantin-flex {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  html {
+    font-size: 60%;
+  }
+}
+
