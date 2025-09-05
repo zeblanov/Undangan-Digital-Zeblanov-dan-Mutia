@@ -417,20 +417,22 @@ h2, h3, p {
 }
 
 
-/* Grid Gallery */
-.gallery-grid {
+/* Grid Gallery – responsif */
+.gallery-grid{
   display: grid;
-  grid-template-columns: repeat(5, 1fr); /* fix 5 kolom */
-  gap: 20px;
-  justify-items: center; /* semua foto center di kolom */
-  max-width: 1200px; /* biar grid tidak kepanjangan */
-  margin: 40px auto 0; /* supaya grid center */
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px;
+  max-width: 1200px;
+  margin: 40px auto 0;
+  justify-items: stretch;   /* biar item melebar penuh kolom */
 }
 
-.gallery-img {
-  width: 200px;   /* fix ukuran */
-  height: 300px;  /* fix tinggi (boleh diubah sesuai proporsi) */
-  object-fit: cover; /* supaya gambar tetap rapi */
+
+.gallery-img{
+  width: 100%;
+  aspect-ratio: 3 / 4;   /* proporsi potret; pakai 1 / 1 kalau mau kotak */
+  object-fit: cover;     /* isi penuh tanpa gepeng */
+  display: block;        /* hilangkan celah bawaan img inline */
   border-radius: 10px;
   cursor: pointer;
   transition: transform 0.3s;
