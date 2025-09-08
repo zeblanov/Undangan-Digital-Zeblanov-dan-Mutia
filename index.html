@@ -43,9 +43,21 @@
         <a href="#info" class="btn-undangan">Lihat Undangan</a>
       </div>
       <button id="toggle-music" class="btn-musik">♫</button>
-      <audio id="bg-music" autoplay loop>
+      <audio id="bg-music" loop>
         <source src="musik/Dansa.mp3" type="audio/mpeg" />
       </audio>
+
+      <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          const music = document.getElementById("bg-music");
+          function startMusic() {
+            music.play().catch((err) => console.log("Autoplay diblokir:", err));
+            document.removeEventListener("click", startMusic);
+          }
+          document.addEventListener("click", startMusic);
+        });
+      </script>
+
       <div class="flower-container" id="falling-flowers"></div>
     </section>
 
